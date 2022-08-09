@@ -1,4 +1,4 @@
-package com.pantrist.firebase.dynamiclinks
+package com.tfarras.firebase.dynamiclinks
 
 import android.content.ContentValues
 import android.content.Intent
@@ -212,12 +212,17 @@ class CapacitorFirebaseDynamicLinks : Plugin() {
                 .getDynamicLink(intent)
                 .addOnSuccessListener(activity) { pendingDynamicLinkData ->
                     var deepLink: Uri? = null
+
                     if (pendingDynamicLinkData != null) {
-                        deepLink = pendingDynamicLinkData.link
+                        deepLink = pendingDynamicLinkData.getLink()
                     }
+                    
                     if (deepLink != null) {
                         val ret = JSObject()
+
                         ret.put("url", deepLink.toString())
+                        ret.put("queryParams", deepLink.getQueryParameter("invitedId"))
+                        
                         notifyListeners(EVENT_DEEP_LINK, ret, true)
                     }
                 }

@@ -79,7 +79,7 @@ function listenToDeepLinkOpen() {
 
 <docgen-index>
 
-* [`addListener('deepLinkOpen', ...)`](#addlistenerdeeplinkopen-)
+* [`addListener('deepLinkOpen', ...)`](#addlistenerdeeplinkopen)
 * [`removeAllListeners()`](#removealllisteners)
 * [`createDynamicLink(...)`](#createdynamiclink)
 * [`createDynamicShortLink(...)`](#createdynamicshortlink)
