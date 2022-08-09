@@ -39,7 +39,7 @@
     "dist/",
     "ios/",
     "android/",
-    "PantristCapacitorFirebaseDynamicLinks.podspec"
+    "TfarrasCapacitorFirebaseDynamicLinks.podspec"
   ],
   "keywords": [
     "capacitor",
